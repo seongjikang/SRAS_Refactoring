@@ -81,15 +81,15 @@ public class User {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		User user = (User) o;
-		return Objects.equals(userId, user.userId) &&
-				Objects.equals(password, user.password) &&
-				Objects.equals(userName, user.userName) &&
-				Objects.equals(department, user.department) &&
-				Objects.equals(authority, user.authority);
+		return Objects.equals(getUserId(), user.getUserId()) &&
+				Objects.equals(getPassword(), user.getPassword()) &&
+				Objects.equals(getUserName(), user.getUserName()) &&
+				Objects.equals(getDepartment(), user.getDepartment()) &&
+				Objects.equals(getAuthority(), user.getAuthority());
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(userId, password, userName, department, authority);
+		return Objects.hash(getUserId(), getPassword(), getUserName(), getDepartment(), getAuthority());
 	}
 }
